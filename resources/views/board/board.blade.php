@@ -315,6 +315,7 @@
 
         function getBoard() {       
             $.get('{{route('board.board')}}', function(data){
+                // alert();
                 var fee = day.fee ?? 14;
                 let type = "{{ $day->type }}";
                 let moneda = "{{ $day->type == 1 || $day->type == 3 ? '$us' : 'Bs.' }}";
@@ -322,7 +323,6 @@
                 var cantidad = '<b style="font-size:{{ setting("interface.font") *2.5 }}em; color: white">CANTIDAD:</b><br><span class="input-group-text texto" style="font-size:{{ setting("interface.font") *5 }}em"><b>'+data[0].quantity+'</b></span>'
                 var lote = '<b style="font-size:{{ setting("interface.font") *2.5 }}em; color: white">LOTE:</b><span class="input-group-text texto" style="font-size:{{ setting("interface.font") *5 }}em"><b>'+data[0].lote+'</b></span>'
                 var precio ='<b style="font-size:{{ setting("interface.font") *2.5 }}em; color: white">'+(day.type == 1 || day.type == 3 ? (day.type == 3 ? 'CUOTA (2+2+'+(fee-4)+'='+fee+')' : 'PRECIO') : 'PRECIO POR KG.')+' ('+moneda+'):</b><br><span class="input-group-text texto" style="font-size:{{ setting("interface.font") *5 }}em"><b>'+(day.type == 1 || day.type == 2 ? data[0].price : data[0].price)+'</b></span>'
-
                 let comission = 0;
                 if(type == 1){
                     comission = data[0].price * (day.percentage /100) * data[0].quantity;
@@ -352,6 +352,8 @@
                     total = '<b style="font-size:{{ setting("interface.font") *2.5 }}em; color: white">TOTAL A PAGAR ('+moneda+'):</b><br><span class="input-group-text texto" style="font-size:{{ setting("interface.font") *5 }}em;color: white"><b>'+((data[0].price *data[0].total_weight) +comission).toFixed(2)+'</b></span>';
                     total_dollar = '<b style="font-size:{{ setting("interface.font") *2.5 }}em; color: white">PRECIO PROMEDIO ($us.):</b><br><div class="input-group-text texto" style="font-size:{{ setting("interface.font") *5 }}em; background-color: white !important; color: black !important"><b>'+parseFloat(precio_promedio_monto > 0 ? precio_promedio_monto / dollar : 0).toFixed(1)+'</b></div>';
                 }
+
+                // alert(1)
 
                 $('#categoria').html(categoria);
                 $('#precio').html(precio);

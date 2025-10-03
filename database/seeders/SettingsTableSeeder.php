@@ -129,6 +129,17 @@ class SettingsTableSeeder extends Seeder
                 'order' => 5,
                 'group' => 'Admin',
             ),
+            10 => 
+            array (
+                'id' => 11,
+                'key' => 'interface.font',
+                'display_name' => 'Font',
+                'value' => '1',
+                'details' => NULL,
+                'type' => 'text',
+                'order' => 6,
+                'group' => 'interface',
+            ),
         ));
         
         
