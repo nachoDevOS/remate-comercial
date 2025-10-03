@@ -82,7 +82,9 @@ class DayController extends Controller
         $ready = Ready::with(['category', 'day'])->where('status',1)->where('deleted_at', null)->where('day_id', $id)->first();
         if($ready){
             $readys = Ready::with('category')->where('status',1)->where('deleted_at', null)->where('day_id', $id)->get();
+            //  return $readys;
             $next = Next::create(['ready_id' => $ready->id, 'total' => count($readys)-1, 'lote' => $ready->lote, 'quantity' => $ready->quantity, 'price' => $ready->price, 'category' => $ready->category->name, 'total_weight' => $ready->total_weight]);
+            //  return $readys;
             $day = Day::find($id);
 
             return view('board.board-user', compact('id', 'ready', 'readys', 'next', 'day'));

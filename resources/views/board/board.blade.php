@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>El Corral - CodeSoft</title>
+    <title>Remate-Comercial</title>
 
     <!-- Favicon -->
     <?php $admin_favicon = Voyager::setting('admin.icon_image', ''); ?>
@@ -142,7 +142,7 @@
         <div class="footer-image"></div>
         <div class="footer">
             <div class="footer-content">
-                El Corral - <span style="color: {{ env('APP_COLOR') }}">Trinidad-Beni-Bolivia</span>
+                Remate Comercial - <span style="color: {{ env('APP_COLOR') }}">Trinidad-Beni-Bolivia</span>
             </div>
         </div>
     </div>
@@ -372,7 +372,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js" integrity="sha512-nYuHvSAhY5lFZ4ixSViOwsEKFvlxHMU2NHts1ILuJgOS6ptUmAGt/0i5czIgMOahKZ6JN84YFDA+mCdky7dD8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        const socket = io("localhost:3001");
+        const socket = io("localhost:3005");
         socket.on('get_pull', data => {
             getBoard();
         });

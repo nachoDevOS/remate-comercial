@@ -27,25 +27,11 @@ class UsersTableSeeder extends Seeder
                 'email' => 'admin@admin.com',
                 'avatar' => 'users/default.png',
                 'email_verified_at' => NULL,
-                'password' => '$2y$10$SNVEgwt1nv2JYskgBjhpyOo5sRfaZd.Un9GEIoWS41izZFTUOHXXG',
+                'password' => '$2y$10$ILLZfhsbwinK3235ceVa7O0mj3M5fr33wb3z28aDqiBWLwBfSUzYy',
                 'remember_token' => NULL,
                 'settings' => '{"locale":"es"}',
                 'created_at' => '2021-06-01 21:05:11',
                 'updated_at' => '2022-05-08 17:21:53',
-            ),
-            1 => 
-            array (
-                'id' => 2,
-                'role_id' => 2,
-                'name' => 'EL CORRAL',
-                'email' => 'corral@gmail.com',
-                'avatar' => 'users/default.png',
-                'email_verified_at' => NULL,
-                'password' => '$2y$10$Yph2qZ1vE7E/4nSMtGEjkeQbe7kgvLEQ5nVDPWngCDH0HA2WVtit.',
-                'remember_token' => NULL,
-                'settings' => '{"locale":"es"}',
-                'created_at' => '2022-05-08 17:25:20',
-                'updated_at' => '2022-05-08 17:31:35',
             ),
         ));
         
