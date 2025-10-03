@@ -24,6 +24,6 @@ io.on('connection', (socket) => {
     });
 });
 
-server.listen(3030, () => {
+server.listen(3031, () => {
     console.log('Server Socket.io is running');
 });
