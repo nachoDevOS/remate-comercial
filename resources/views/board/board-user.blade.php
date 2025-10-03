@@ -166,7 +166,7 @@
     <script src="{{ url('js/main.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js" integrity="sha512-nYuHvSAhY5lFZ4ixSViOwsEKFvlxHMU2NHts1ILuJgOS6ptUmAGt/0i5czIgMOahKZ6JN84YFDA+mCdky7dD8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        const socket = io("localhost:3002");
+        const socket = io("rematecomercial-server.soluciondigital.dev");
     </script>
     <script>
         $(document).ready(function() {
