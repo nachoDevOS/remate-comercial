@@ -1,8 +1,8 @@
 const fs = require("fs");
 
 const server = require('https').createServer({
-  key: fs.readFileSync("/etc/letsencrypt/live/rematecomercial.soluciondigital.dev/privkey.pem"),
-  cert: fs.readFileSync("/etc/letsencrypt/live/rematecomercial.soluciondigital.dev/fullchain.pem")
+  key: fs.readFileSync("/etc/letsencrypt/live/rematecomercial-server.soluciondigital.dev/privkey.pem"),
+  cert: fs.readFileSync("/etc/letsencrypt/live/rematecomercial-server.soluciondigital.dev/fullchain.pem")
 });
 
 // const server = require('http').createServer();
