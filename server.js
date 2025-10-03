@@ -1,11 +1,11 @@
 const fs = require("fs");
 
-// const server = require('https').createServer({
-//   key: fs.readFileSync("/etc/letsencrypt/live/example.com/privkey.pem"),
-//   cert: fs.readFileSync("/etc/letsencrypt/live/example.com/fullchain.pem")
-// });
+const server = require('https').createServer({
+  key: fs.readFileSync("/etc/letsencrypt/live/rematecomercial.soluciondigital.dev/privkey.pem"),
+  cert: fs.readFileSync("/etc/letsencrypt/live/rematecomercial.soluciondigital.dev/fullchain.pem")
+});
 
-const server = require('http').createServer();
+// const server = require('http').createServer();
 
 const io = require('socket.io')(server, {
     cors: { origin: "*"}
