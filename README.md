@@ -10,3 +10,33 @@ composer install
 cp .env.example .env
 php artisan template:install
 ```"# remate-comercial" 
+
+> Servidor de Socket.IO.
+
+## Requesitos
+- Nodejs >= 22
+
+## Install
+
+```sh
+npm install
+```
+
+## Modify Developer and Production
+
+```sh
+//Developer 
+const server = require('http').createServer();
+
+//Production
+const server = require('https').createServer({
+   key: fs.readFileSync("/etc/letsencrypt/live/rematecomercial-server.soluciondigital.dev/privkey.pem"),
+   cert: fs.readFileSync("/etc/letsencrypt/live/rematecomercial-server.soluciondigital.dev/fullchain.pem")
+ });
+```
+
+## Usage
+
+```sh
+npm start
+```
