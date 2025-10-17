@@ -148,7 +148,7 @@
                         if($day->type == 1){
                             $subtotal += $item->quantity * $item->price;
                             $total += ($item->quantity * $item->price) + $item->price_add;
-                        }elseif($day->type == 1){
+                        }elseif($day->type == 2){
                             $subtotal += $item->price * $item->total_weight;
                             $total += ($item->price * $item->total_weight) + $item->price_add;
                         }else{
