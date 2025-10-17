@@ -222,6 +222,15 @@ class DayController extends Controller
             $q->where('status',1)->where('deleted_at', null);
         }])->where('id', $id)->first();
         $next = Next::get()->first();
+
+        // Reordenar la lista para poner el item activo al principio
+        if ($day && $next) {
+            $activeReady = $day->readys->firstWhere('id', $next->ready_id);
+            if ($activeReady) {
+                $day->readys = $day->readys->where('id', '!=', $next->ready_id);
+                $day->readys->prepend($activeReady);
+            }
+        }
         return view('board.board-ready', compact('id', 'day', 'next'));
     }
 
