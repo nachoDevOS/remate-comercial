@@ -36,7 +36,7 @@
                     <td>
                         @if($day->type == 2 && $next->ready_id == $item->id)
                         <a type="button" href="#" data-toggle="modal" data-target="#modal-editar-peso" class="btn btn-info btn-sm btn-editar-peso" data-id="{{ $item->id }}" title="Editar peso total">
-                            <i class="voyager-edit"></i>
+                            <i class="voyager-edit" data-total_weight="{{ $item->total_weight }}"></i>
                         </a>
                         @endif
                         <a type="button" href="{{route('day.manual',['id'=>$item->id,'i'=>$i, 'day'=>$id] )}}" class="btn btn-success btn-sm" title="Siguiente">

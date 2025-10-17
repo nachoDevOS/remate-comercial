@@ -241,6 +241,14 @@
                 $('#input-price').val(parseFloat(price + value).toFixed(2));
                 $('#form-board-updte').trigger('submit');
             });
+
+            // Asignar el peso actual al input del modal y limpiarlo al hacer focus
+            $(document).on('click', '.btn-editar-peso', function(){
+                let total_weight = $(this).find('i').data('total_weight');
+                $('#form-editar-peso input[name="total_weight"]').val(total_weight);
+            });
+
+            $('#form-editar-peso input[name="total_weight"]').focus(function(){ $(this).val(''); });
         });
 
         $("#input-price").on("click", function () {
