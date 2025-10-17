@@ -31,6 +31,7 @@
                     @else
                     <td>{{ intval($item->total_weight) }}</td>
                     <td>{{ intval($item->total_weight / $item->quantity) }}</td>
+                    <td>{{ $item->price }}</td>
                     @endif
                     <td>
                         @if($day->type == 2 && $next->ready_id == $item->id)
